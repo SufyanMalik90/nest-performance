@@ -1,6 +1,6 @@
 # Optimization of `getTopSellingProducts` API
 
-## 📌 Overview
+##  Overview
 This document outlines the optimization process applied to the `getTopSellingProducts` API to enhance its performance. The initial implementation faced inefficiencies due to redundant queries, which were addressed through query optimization using SQL joins.
 
 ---
@@ -22,7 +22,7 @@ To address these inefficiencies, I refactored the query to:
 - Reduce the number of database queries from multiple to just **one efficient query**.
 - Utilize **GROUP BY and ORDER BY** to efficiently rank the top-selling products.
 
-### **🔹 Optimized Code Implementation**
+### **Optimized Code Implementation**
 ```typescript
 @Get('top-products')
 async getTopSellingProducts() {
@@ -45,27 +45,27 @@ async getTopSellingProducts() {
 ```
 
 
-## 📊 **Performance Improvements**
+##  **Performance Improvements**
 
 By implementing this optimized query, I have significantly improved the efficiency of the `getTopSellingProducts` API, reducing database load and enhancing response times.
 
 ---
 
-## 📌 **Setup & Execution**
+##  **Setup & Execution**
 
-### **🔹 Project Setup**
+### **Project Setup**
 - Ensure that your database and TypeORM are properly configured.
 
 clone the repo:
   ```bash
-
+  git clone https://github.com/SufyanMalik90/nest-performance.git
   ```
 - Install dependencies using:
   ```bash
   npm install
   ```
 
-### **🔹 Running the Project Locally**
+### **Running the Project Locally**
 1. **Start the required services using Docker:**
    ```bash
    docker-compose up -d
@@ -86,5 +86,5 @@ GET http://localhost:4000/analytics/top-products
 
 ---
 
-## 📌 **Conclusion**
+##  **Conclusion**
 This optimization has successfully eliminated redundant queries, improving the API’s efficiency and reducing the load on the database. The optimized approach ensures better performance and scalability while maintaining data accuracy.
